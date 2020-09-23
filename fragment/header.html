@@ -1,0 +1,66 @@
+<?
+    header("Expires: Tue, 03 Jul 2001 06:00:00 GMT");
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
+    header("Connection: close");
+?>
+
+
+<!DOCTYPE html>
+<html lang="utf-8">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Road</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1de2889fc.js"></script>
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 
+    <link rel="stylesheet" href="http://<?=$_SERVER['SERVER_NAME']?>/css/reset.css">
+
+    <link rel="stylesheet" href="http://<?=$_SERVER['SERVER_NAME']?>/css/style.css">
+  
+    <script src="http://<?=$_SERVER['SERVER_NAME']?>/js/jquery-1.12.4.min.js"></script>
+  
+    <script src="http://<?=$_SERVER['SERVER_NAME']?>/js/index.js"></script> -->
+</head>
+
+<body id="index">
+    <div class="loade">
+        <section class="loading-page">
+            <div class="loading-page-cover">
+                <div class="last-box">
+                </div>
+            </div>
+            <div class="inner-box">
+            </div>
+            <div class="text-box">
+                <p>Safe</p>
+                <p>Rode</p>
+            </div>
+        </section>
+        <div class="loading-logo">
+            <div class="loading">Loading
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+            </div>
+        </div>
+    </div>
+    <div id="wrap">
+        <header id="header">
+            <div class="header-cover clearfix">
+                <h1 class="logo">Safe Rode</h1>
+                <div class="toggle">
+                    <a href="#">
+                        <p class="sr-only">메뉴</p>
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </header>

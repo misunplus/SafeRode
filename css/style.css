@@ -1,0 +1,725 @@
+@charset "utf-8";
+
+button {
+	border: none;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	padding: 5px 20px;
+}
+.loade {
+	width: 100%;
+	height: 100%;
+}
+.loade {
+	position: relative;
+	background: #fff6ae;
+}
+.loade > .loading-page {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@-webkit-keyframes dowun {
+	0% {
+		-webkit-transform: translateY(-500px) rotate(0deg);
+		opacity: 0.1;
+	}
+	50% {
+		-webkit-transform: translateY(-250px) rotate(25deg);
+		opacity: 0.5;
+	}
+	100% {
+		-webkit-transform: translateY(0px) rotate(45deg);
+		opacity: 1;
+	}
+}
+@-webkit-keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.loade > .loading-page > .loading-page-cover {
+	width: 300px;
+	height: 300px;
+	border: 5px solid #fff;
+	transform: rotate(45deg);
+	box-sizing: border-box;
+	-webkit-animation: dowun 1.5s linear;
+}
+
+.loade > .loading-page > .loading-page-cover > .last-box {
+	width: 100%;
+	height: 100%;
+	background-color: #f7c600;
+}
+@-webkit-keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(315deg);
+	}
+}
+
+.loade > .loading-page > .inner-box {
+	position: absolute;
+	top: 24px;
+	left: 24px;
+	width: 80%;
+	height: 80%;
+	border: 5px solid;
+	border-radius: 20px;
+	transform: rotate(45deg);
+	/* transform: rotate(45deg);
+	transition: transform 1.5s linear; */
+	-webkit-animation: rotate 1.5s linear;
+}
+
+.loade > .loading-page > .text-box {
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 30%;
+	margin-left: -15%;
+	margin-top: -15%;
+	font-size: 36px;
+	font-weight: 600;
+	opacity: 1;
+	/* outline: 1px solid; */
+}
+
+@-webkit-keyframes text-up {
+	0% {
+		transform: translateY(-50px);
+	}
+	50% {
+		transform: translateY(-75px);
+	}
+	100% {
+		transform: translateY(-150px);
+	}
+}
+
+.loade > .loading-page > .text-box > p:first-child {
+	position: absolute;
+	top: 150px;
+	text-align: center;
+	transform: translateY(-150px);
+	/* transition: transform 1000ms linear; */
+	-webkit-animation: text-up 1.5s linear;
+}
+.loade > .loading-page > .text-box > p:last-child {
+	position: absolute;
+	top: 150px;
+	transform: translateY(-100px);
+	/* transform: translateY(-50px); */
+	/* transition: transform 1500ms linear; */
+}
+
+.loade > .loading-logo {
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	width: 100%;
+	transform: translateX(-50%);
+}
+.loade > .loading-logo > .loading {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 300px;
+	font-size: 50px;
+}
+
+.loade > .loading-logo > .loading > span {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: black;
+	border-radius: 50%;
+	opacity: 0;
+}
+.loade > .loading-logo > .loading > .circle1 {
+	-webkit-animation: opacity 1s infinite linear;
+}
+.loade > .loading-logo > .loading > .circle2 {
+	-webkit-animation: opacity 1s infinite linear;
+}
+.loade > .loading-logo > .loading > .circle3 {
+	-webkit-animation: opacity 1s infinite linear;
+}
+
+#wrap {
+	overflow: hidden;
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff6ae;
+}
+
+#header {
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 1000;
+}
+
+#header > .header-cover > .logo {
+	position: relative;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	z-index: 1001;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+#header > .header-cover > .logo:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100px;
+	height: 50px;
+	background: url(./../img/logo.png) no-repeat;
+	background-size: 100px 50px;
+	content: "";
+}
+
+#header > .header-cover > .toggle {
+	height: 50px;
+	float: right;
+}
+#header > .header-cover > .toggle > a {
+	display: block;
+	width: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+#menu-content {
+	/* display: none; */
+	position: absolute;
+	left: -100%;
+	top: 0;
+	width: 80%;
+	height: 100%;
+	z-index: 1000;
+	background-color: #fff6ae;
+	border: 1px solid #fff6ae;
+}
+
+#menu-content > .menu-content-cover {
+	width: 100%;
+	height: 100%;
+}
+#menu-content > .menu-content-cover > nav {
+	width: 100%;
+	height: 100%;
+}
+#menu-content > .menu-content-cover > nav > .close {
+	position: absolute;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	font-size: 50px;
+	z-index: 1000;
+}
+#menu-content > .menu-content-cover > nav > .side-top {
+	height: 30%;
+}
+#menu-content > .menu-content-cover > nav > .side-top > .profile {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #f7c600;
+}
+#menu-content > .menu-content-cover > nav > .side-top > .profile > .frame {
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+
+	border-radius: 50%;
+	background: #fff;
+}
+#menu-content > .menu-content-cover > nav > .side-top > .profile > .frame > img {
+	width: 100%;
+	height: 100%;
+	background-size: cover cover;
+}
+
+#menu-content > .menu-content-cover > nav > .side-middel {
+	height: 60%;
+}
+#menu-content > .menu-content-cover > nav > .side-middel > li > a {
+	display: block;
+	display: flex;
+	height: 50px;
+}
+#menu-content > .menu-content-cover > nav > .side-middel > li > a > i {
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+	line-height: 50px;
+	padding-left: 20px;
+}
+#menu-content > .menu-content-cover > nav > .side-middel > li > a > p {
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: 600;
+}
+#menu-content > .menu-content-cover > nav > .side-bottom {
+	height: 10%;
+	display: flex;
+}
+#menu-content > .menu-content-cover > nav > .side-bottom > li {
+	position: relative;
+	width: 50%;
+}
+#menu-content > .menu-content-cover > nav > .side-bottom > li > a {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+}
+#menu-content > .menu-content-cover > nav > .side-bottom > li > a > i {
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+	line-height: 50px;
+	padding-left: 20px;
+}
+#menu-content > .menu-content-cover > nav > .side-bottom > li > a > p {
+	line-height: 50px;
+	font-weight: 600;
+}
+
+/* 메인페이지 */
+#index #main-content {
+	position: absolute;
+	/* top: 50px; */
+	width: 100%;
+	/* height: 85%; */
+	/* top: 50%;
+	transform: translateY(-50%); */
+	background-color: #fff6ae;
+	height: 100%;
+}
+
+#index #main-content > .main-content-cover {
+	/* background-color: red; */
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	height: 75%;
+}
+#index #main-content > .main-content-cover > div {
+	position: relative;
+	width: 100%;
+	background-color: #f7c600;
+	border-radius: 20px;
+}
+#index #main-content > .main-content-cover > div > .text-cover {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	display: inline-block;
+	/* outline: 1px solid red; */
+}
+#index #main-content > .main-content-cover > div > .text-cover > h2 {
+	height: 50px;
+	color: #fff;
+	text-align: right;
+	font-size: 30px;
+	font-weight: 800;
+}
+#index #main-content > .main-content-cover > div > .text-cover > p {
+	font-size: 16px;
+	color: #000;
+	line-height: 1.5;
+}
+#index #main-content > .main-content-cover > div .button-cover {
+	position: absolute;
+	right: 50px;
+	bottom: 15px;
+	display: inline-block;
+}
+#index #main-content > .main-content-cover > div > i {
+	position: relative;
+	top: -20px;
+	left: -40px;
+	font-size: 150px;
+	color: #fff;
+	transform: rotate(320deg);
+}
+#index #main-content > .main-content-cover > .bad-car > i {
+	position: relative;
+	top: -45px;
+	left: 75%;
+	font-size: 150px;
+	color: #fff;
+	transform: rotate(40deg);
+}
+#index #main-content > .main-content-cover > .bad-car > .text-cover {
+	position: absolute;
+	left: 20px;
+	display: inline-block;
+	/* outline: 1px solid red; */
+}
+#index #main-content > .main-content-cover > .bad-car > .text-cover > h2 {
+	height: 40px;
+	text-align: left;
+}
+
+#index #main-content > .main-content-cover > .bad-car .button-cover {
+	position: absolute;
+	left: 120px;
+	bottom: 5px;
+}
+
+/* 푸터 */
+footer {
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+	width: 100%;
+	background-color: #fff;
+}
+footer > nav {
+	margin-top: 20px;
+}
+footer > nav > ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+footer > nav > ul > li > a > i {
+	font-size: 50px;
+}
+footer > nav > ul > li > a > p {
+	text-align: center;
+	font-size: 15px;
+	font-weight: 800;
+}
+footer > nav > ul > li:hover > a > i {
+	color: #f7c600;
+}
+footer > nav > ul > li:hover > a > p {
+	color: #f7c600;
+}
+
+/* 인덱스  */
+body#index > #wrap > section#login {
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+body#index > #wrap > section#login > .login-cover {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 80%;
+	margin-top: 20%;
+	margin-bottom: 10%;
+}
+
+body#index > #wrap > section#login > .login-cover > .logo {
+	margin-bottom: 30%;
+}
+body#index > #wrap > section#login > .login-cover > .logo > a {
+}
+body#index > #wrap > section#login > .login-cover > .logo > a > span {
+	display: block;
+	color: #f7c600;
+
+	font-size: 60px;
+	text-align: center;
+}
+body#index > #wrap > section#login > .login-cover > .logo > a > span:first-child {
+	margin-left: 40px;
+	text-align: center;
+}
+
+body#index > #wrap > section#login > .login-cover > .login-form {
+	position: relative;
+	width: 200px;
+	margin: 0 auto;
+}
+
+body#index > #wrap > section#login > .login-cover > .login-form > input {
+	width: 200px;
+	height: 35px;
+	margin-bottom: 20px;
+	color: #fff;
+	text-align: center;
+	border: initial;
+	border-radius: 20px;
+	background-color: #f7c600;
+}
+body#index > #wrap > section#login > .login-cover > .login-form > .user {
+	position: absolute;
+	top: 9px;
+	left: 20px;
+	color: #fff;
+	font-size: 20px;
+}
+body#index > #wrap > section#login > .login-cover > .login-form > .lock {
+	position: absolute;
+	top: 65px;
+	left: 20px;
+	color: #fff;
+	font-size: 20px;
+}
+
+body#index > #wrap > section#login > .login-cover > .service {
+	display: flex;
+	justify-content: space-between;
+	width: 250px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+body#index > #wrap > section#login > .login-cover > .service > button {
+	width: 100px;
+	color: #fff;
+	background-color: #f7c600;
+}
+
+body#index > #wrap > section#login > .login-cover > .sns {
+	width: 150px;
+
+	display: flex;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	justify-content: space-between;
+}
+body#index > #wrap > section#login > .login-cover > .sns > .kakao {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: url(./../img/kakao-icon.png) no-repeat;
+}
+body#index > #wrap > section#login > .login-cover > .sns > .google {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: url(./../img/google-icon.png) no-repeat;
+}
+
+/* 회원가입 */
+
+body#signup > #wrap > section#login {
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+body#signup > #wrap > section#login > .login-cover {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 80%;
+	margin-top: 20%;
+	margin-bottom: 10%;
+}
+
+body#signup > #wrap > section#login > .login-cover > .logo {
+	margin-bottom: 30%;
+}
+body#signup > #wrap > section#login > .login-cover > .logo > a {
+}
+body#signup > #wrap > section#login > .login-cover > .logo > a > span {
+	display: block;
+	color: #f7c600;
+
+	font-size: 60px;
+	text-align: center;
+}
+body#signup > #wrap > section#login > .login-cover > .logo > a > span:first-child {
+	margin-left: 40px;
+	text-align: center;
+}
+
+body#signup > #wrap > section#login > .login-cover > .login-form {
+	position: relative;
+	width: 200px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+}
+
+body#signup > #wrap > section#login > .login-cover > .login-form > input {
+	width: 200px;
+	height: 35px;
+	margin-bottom: 20px;
+	color: #fff;
+	text-align: center;
+	border: initial;
+	border-radius: 20px;
+	background-color: #f7c600;
+}
+body#signup > #wrap > section#login > .login-cover > .login-form > .user {
+	position: absolute;
+	top: 9px;
+	left: 20px;
+	color: #fff;
+	font-size: 20px;
+}
+body#signup > #wrap > section#login > .login-cover > .login-form > .lock {
+	position: absolute;
+	top: 65px;
+	left: 20px;
+	color: #fff;
+	font-size: 20px;
+}
+
+body#signup > #wrap > section#login > .login-cover > .service {
+	display: flex;
+	justify-content: space-between;
+	width: 250px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+body#signup > #wrap > section#login > .login-cover > .service > button {
+	width: 100px;
+	color: #fff;
+	background-color: #f7c600;
+}
+
+/* game */
+#game #wrap {
+}
+#game #main-content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+#game #main-content > .main-content-cover {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* background-color: red; */
+	/* display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around; */
+	/* outline: 1px solid; */
+}
+#game #main-content > .main-content-cover > div {
+	position: relative;
+	width: 100%;
+	background-color: #f7c600;
+	border-radius: 20px;
+}
+#game #main-content > .main-content-cover > .game {
+	margin-bottom: 100px;
+}
+#game #main-content > .main-content-cover > div > .text-cover {
+	position: absolute;
+	/* right: 20px;
+	top: 20px; */
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+	/* outline: 1px solid red; */
+}
+#game #main-content > .main-content-cover > div > .text-cover > h2 {
+	height: 50px;
+	color: #fff;
+	text-align: right;
+	font-size: 45px;
+	font-weight: 800;
+}
+/* #game #main-content > .main-content-cover > div > .text-cover > p {
+	font-size: 16px;
+	color: #000;
+	line-height: 1.5;
+} */
+/* #game #main-content > .main-content-cover > div .button-cover {
+	position: absolute;
+	right: 50px;
+	bottom: 15px;
+	display: inline-block;
+} */
+#game #main-content > .main-content-cover > div > i {
+	position: relative;
+	top: -50px;
+	left: 30%;
+	/* transform: translateX(-50%); */
+	font-size: 150px;
+	color: #fff;
+	transform: rotate(20deg);
+}
+/* #game #main-content > .main-content-cover > .bad-car > i {
+	position: relative;
+	top: -45px;
+	left: 75%;
+	font-size: 150px;
+	color: #fff;
+	transform: rotate(40deg);
+} */
+/* #game #main-content > .main-content-cover > .bad-car > .text-cover {
+	position: absolute;
+	left: 20px;
+	display: inline-block;
+	/* outline: 1px solid red; 
+} 
+/* #game #main-content > .main-content-cover > .bad-car > .text-cover > h2 {
+	height: 40px;
+	text-align: left;
+}
+
+#game #main-content > .main-content-cover > .bad-car .button-cover {
+	position: absolute;
+	left: 120px;
+	bottom: 5px;
+} */
+
+/* 게임 플레이 */
+#game-play-page .game-play-main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#game-play-page .game-play-main > img {
+	width: 100%;
+	height: 100%;
+}
+
+/* 퀴즈 플레이 */
+#quiz-page .quiz-main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#quiz-page .quiz-main > img {
+	left: 50%;
+	width: 100%;
+	height: 100%;
+}
